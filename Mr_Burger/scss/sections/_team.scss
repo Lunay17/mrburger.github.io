@@ -1,0 +1,134 @@
+.team {
+  background-image: url('../img/bg/sbs-1255-x2.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.team_section {
+  position: absolute;
+  background-color: #2f3234;
+  opacity: 0.93;
+  background-size: cover;
+  width: 50%;
+  top: rem(0px);
+  right: rem(0px);
+  bottom: rem(0px);  
+//  padding: 5% 2% 0% 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   @include tablets() { 
+     width: 100%;
+  }
+}
+
+.team_content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+  justify-content: center;
+  @include tablets() {
+    align-items: center; 
+     text-align: center;
+  }
+}
+
+.header__team, .team_list {
+    justify-content: space-around;
+    padding-bottom: 10%;
+}
+
+.team_list {
+  @include phones() {
+     text-align: left;
+     padding-left: rem(20px);
+  }
+}
+
+.member_info{
+ //   display: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.member_name{
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(28px);   
+    text-decoration: none; 
+    margin-bottom: rem(10px);
+    margin-top: rem(20px);
+    display: block;
+    position: relative;
+    padding-left: 5%;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    @include tablets() {
+    display: inline-block; 
+    font-size: rem(25px);
+  }
+
+    &:before {
+      content: "";
+      width: rem(0px);
+      height: rem(0px);
+      border: rem(9px) solid transparent;
+      border-top-color: $yellow;
+      border-bottom: none;
+      display: block;
+      position: absolute;
+      left: rem(-16px);
+      top: rem(8px);
+      margin-right: 25%;
+  }
+}
+.active {
+  .member_info{
+    height: auto;
+  }
+
+  .member_name{
+    color: $yellow;
+
+    &:before{
+      transform: rotate(180deg)
+    }
+  }
+}
+
+
+.member_info__text{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 55%;
+  justify-content: center;
+  max-height: rem(100px);
+  @include phones{
+    text-align: left;
+  }
+} 
+
+.member_role{
+  width: rem(208px);
+  height: rem(92px);
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: rem(14px);
+  line-height: rem(24px);
+  font-weight: 700;
+  margin: rem(0px);
+}
+
+  .text{
+    font-weight: 300;
+  }
